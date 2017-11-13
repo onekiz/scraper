@@ -16,7 +16,7 @@ var path = require("path");
 // Require all models
 var db = require("./model");
 
-var PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Initialize Express
 var app = express();
