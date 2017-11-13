@@ -18,6 +18,7 @@ var db = require("./model");
 
 const PORT = process.env.PORT || 3000;
 
+
 // Initialize Express
 var app = express();
 
@@ -33,8 +34,8 @@ app.use(express.static("public"));
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
-var URI = "mongodb://heroku_29ln4fz2:7urvtsimoqktqg89ced35vrhah@ds259255.mlab.com:59255/heroku_29ln4fz2";
-var MONGODB_URI = process.env.MONGOD_URI || "mongodb://localhost/mongoHeadlines";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scraper";
+
 mongoose.connect(MONGODB_URI, {
   useMongoClient: true
 });

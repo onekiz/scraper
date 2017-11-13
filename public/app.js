@@ -4,7 +4,7 @@
 // Whenever someone SAVE A Note
 $(document).on("click", ".saveArticle", function() {
   // Empty the notes from the note section
-
+  console.log("hello");
   // Save the id from the p tag
   var thisId = $(this).attr("data-id");
   var data = {title: $("#title"+thisId).text(), link:$("#link"+thisId).text()};
